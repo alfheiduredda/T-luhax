@@ -1,8 +1,12 @@
 import numpy as np
 
+'''
+Hey Edda u are sexy
+'''
+
 def Romberg(T):
 	l = len(T)
-	for i in xrange(1,l) : 
+	for i in xrange(1,l) :
 		for k in xrange(l-1,i-1,-1):
 			T[k] = ((4**i)*(T[k-1])-T[k]) / (4**i - 1)
 	return T[l-1]
